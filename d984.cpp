@@ -1,39 +1,52 @@
 #include <iostream>
 using namespace std;
 
-int main() {
-	long long int a,b,c,s,m,l;
+int main(){
+	long long int a,b,c;
 	while(cin>>a>>b>>c){
 		if(a>b&&a>c){
-			l=a;
 			if(b>c){
-				m=b;
-				s=c
-			}else{
-				m=c;
-				s=b
+				if(a>b+c){
+					cout<<"A"<<endl;
+				}else{
+					cout<<"B"<<endl;
+				}
+			}else if(c>b){
+				if(a>b+c){
+					cout<<"A"<<endl;
+				}else{
+					cout<<"C"<<endl;
+				}
 			}
 		}else if(b>a&&b>c){
-			l=b;
 			if(a>c){
-				m=a;
-				s=c
-			}else{
-				m=c;
-				s=a;
+				if(b>a+c){
+					cout<<"B"<<endl;
+				}else{
+					cout<<"A"<<endl;
+				}
+			}else if(c>a){ 
+				if(b>a+c){
+					cout<<"B"<<endl;
+				}else{
+					cout<<"C"<<endl;
+				}
 			}
-		}else{
-			l=c;
+		}else if(c>a&&c>b){
 			if(a>b){
-				m=a;
-				s=b;
-			}else{
-				m=b;
-				s=a;
+				if(c>a+b){
+					cout<<"C"<<endl;
+				}else{
+					cout<<"A"<<endl;
+				}
+			}else if(b>a){
+				if(c>a+b){
+					cout<<"C"<<endl;
+				}else{
+					cout<<"B"<<endl;
+				}
 			}
 		}
-		if(s+m)
-	} 
-    return 0;
-    }
-
+	}
+	return 0;
+}
