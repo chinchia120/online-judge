@@ -2,18 +2,17 @@
 using namespace std;
 
 int main() {
-	int number,range;
-	while(cin>>number>>range){
-		int time=0,sum=0;
-		for(int i=number;i>range||i<=range;i++){
-			sum=sum+i;
+	int num,range;
+	while(cin>>num>>range){
+		int sum,time;
+		sum=num;
+		time=1;
+		while(sum<=range){
+			sum=sum+num+time;
 			time=time+1;
-			if(sum>=range){
-				cout<<time<<endl;
-				break;
-			}
 		}
+		cout<<time<<endl;
 	}
     return 0;
-    }
+}
 
